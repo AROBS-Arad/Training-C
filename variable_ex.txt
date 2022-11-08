@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <limits.h> //for variable limits
+#include<float.h> //Float&double
+
+int myGlobalIntegerNum = 4;
+float myFloatNum=7.49;
+int main(int argc, char *argv[])
+{
+    // Create variables
+    char myCharacher = 'A';   // Character
+    int myIntegerNum;             // Integer (whole number) //ATTENTION - we only declared the variable(the definition is at line 13)
+    //local variables inside a function will take preference
+    float myFloatNum = 8.99;   // Floating point number
+    double myDoubleNum =2578.64;     //Double precision floating point number
+    myIntegerNum = 9; //if we comment this line the value of myIntegerNum is usually 0
+    myGlobalIntegerNum;
+    // Print variables
+    //printf(myIntegerNum);     //WRONG
+    printf("%c\n", myCharacher);
+    printf("%d\n", myIntegerNum);
+    printf("%.2f\n", myFloatNum);
+    printf("%f\n",myDoubleNum);
+    printf("%d\n", myGlobalIntegerNum);
+
+    printf("The number of bits in a byte is = %d\n\n", CHAR_BIT);
+    printf("The size of CHAR is %llu.\nThe minimum value of SIGNED CHAR = %d,and the maximum value of SIGNED CHAR = %d\nThe maximum value of UNSIGNED CHAR = %d\n", sizeof(char), SCHAR_MIN, SCHAR_MAX, UCHAR_MAX);
+    printf("The minimum value of CHAR = %d and the maximum value of CHAR is =%d\n\n",CHAR_MIN, CHAR_MAX);
+    //printf("The maximum value of UNSIGNED CHAR = %u\n\n", UCHAR_MAX); //POSSIBLE WARNING
+    printf("The size of a SHORT INT is %llu\nThe minimum value of SHORT INT = %d and the maximum value of SHORT INT = %d\n\n",sizeof(short), SHRT_MIN, SHRT_MAX);
+    //printf("The maximum value of UNSIGNED INT = %d\n", UINT_MAX); //WRONG
+    printf("The size of INT is %llu.\nThe maximum value of UNSIGNED INT = %u\nThe minimum value of INT = %d and the maximum value of INT =%d\n\n", sizeof(int),UINT_MAX, INT_MIN, INT_MAX);
+
+    printf("The size of FLOAT is %llu.\nThe minimum value of FLOAT is =%f \nand the maximum value of FLOAT is =%f\n\n", sizeof(float), -FLT_MAX, FLT_MAX);
+
+    printf("The size of LONG is %llu.\nThe minimum value of LONG = %ld and the maximum value of LONG =%ld\n\n", sizeof(long), LONG_MIN, LONG_MAX);
+
+    printf("The size of LONG LONG is %llu.\nThe minimum value of LONG LONG = %lld and the maximum value of LONG LONG =%lld\n\n",sizeof(long long),LONG_LONG_MIN, LONG_LONG_MAX);
+
+    printf("The size of DOUBLE is %llu.\nThe minumum value of DOUBLE is =%f\nand the maximum value of DOUBLE = %f\n\n", sizeof(double),-DBL_MAX, DBL_MAX);
+
+    //printf("The minimum value of double with DBL_MIN= %f and and the minimum value of float with FLT_MIN = %f", DBL_MIN, FLT_MIN); //WRONG
+    //printf("The minimum value of float = %.10e\n", FLT_MIN); //WRONG
+return 0;
+}
