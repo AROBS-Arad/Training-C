@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    //arithmetic Operators + - * / %
+    int a = 45;
+    int b = 21;
+    int c;
+    c = a + b;
+    printf("Value of c is %d\n", c );
+    c = a - b;
+    printf("Value of c is %d\n", c );
+    c = a * b;
+    printf("Value of c is %d\n", c );
+    c = a / b; //WRONG! c must be float or double
+    printf("Value of c is %d\n", c );
+    c = a % b;
+    printf("Value of c is %d\n", c );
+
+    // Relational Operators <  >  <=  >=  ==  !=
+    printf("a < b: %d \n", a < b);
+    printf("a > b: %d \n", a > b);
+    printf("a <= b: %d \n", a <= b);
+    printf("a >= b: %d \n", a >= b);
+    printf("a == b: %d \n", a == b);
+    printf("a != b: %d \n\n", a != b);
+
+    //Logical Operators &&  ||  !
+    printf("a && b: %d \n", a && b);
+    printf("a || b: %d \n", a || b);
+    printf("!(a && b): %d \n", !(a&&b));
+    return 0;
+}
